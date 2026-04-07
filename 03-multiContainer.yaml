@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Multi-container
 metadata:
-  name: Multi-container
+  name: multi-container
   namespace: expense
 
 spec:
   containers:
-    - name: nginx
-      image: nginx
-    - name: alpine
-      image: alpine-perl
+  - name: nginx
+    image: nginx
+  - name: alpine
+    image: alpine:3.14
