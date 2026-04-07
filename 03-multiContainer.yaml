@@ -9,6 +9,6 @@ spec:
   - name: nginx
     image: nginx
   - name: alpine
-    image: alpine:3.14
+    image: alpine:3
   - name: almalinux
     image: almalinux:9
