@@ -1,7 +1,7 @@
 apiVersion: v1
-kind: Multi container
+kind: Multi-container
 metadata:
-  name: multi-container
+  name: Multi-container
   namespace: expense
 
 spec:
