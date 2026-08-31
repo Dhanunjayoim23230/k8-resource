@@ -1,0 +1,14 @@
+kind: pod'
+apiVersion: v1
+metadata:
+  name: env_pod
+  namespace: vrushaliprod
+
+spec:
+  - container:
+    name: nginx
+    image: nginx
+    envFrom:
+      course: "Devops"
+      trainer: "Sivakumar"
+      
