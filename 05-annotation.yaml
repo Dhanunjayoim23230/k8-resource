@@ -2,6 +2,8 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: annotations
+  labels:
+    course: "Devops with aws"
   annotations:
     build_url: "https://hellow.jason.txt"
     image_url: "https:docker.com/api"
