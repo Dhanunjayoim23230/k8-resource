@@ -3,8 +3,8 @@ apiVersion: v1
 metadata:
   name: annotations
   annotations:
-    build_url: https://hellow.jason.txt
-    image_url: https:docker.com/api
+    buildurl: https://hellow.jason.txt
+    imageurl: https:docker.com/api
 spec:
   containers:
   - name: nginx
