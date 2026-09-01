@@ -1,0 +1,25 @@
+kind: POd
+apiVersion: v1
+metadata:
+  name: resourceLImit
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    resources:
+      requests:
+        cpu: "250Mi"
+        memory: "100Mi"
+    
+      limits:
+        cpu: "300Mi"
+        memory: "150Mi"
+  - name: log_aggregator
+    image: images.my-company.example/log-aggreagator:v6
+    resources:
+      requests:
+        cpu: "150Mi"
+        memory: "100Mi"
+      limits:
+        cpu: "150Mi"
+        memory: "100Mi"
