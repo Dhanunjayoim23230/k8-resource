@@ -2,4 +2,10 @@ kind: pod
 apiVersion: v1
 metadata:
   name: annotations
-  annotation: 
+  annotation:
+    bild_url: https://hellow.jason.txt
+    image_url:https:docker.com/api
+  spec:
+    - containers:
+      name: nginx
+      image: nginx
