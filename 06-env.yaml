@@ -8,7 +8,7 @@ metadata:
 kind: Pod
 apiVersion: v1
 metadata:
-  name: env_pod
+  name: env
   namespace: vrushaliprod
 spec:
   container:
