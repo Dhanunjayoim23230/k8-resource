@@ -5,7 +5,7 @@ metadata:
   annotations:
     build_url: https://hellow.jason.txt
     image_url: https:docker.com/api
-  spec:
-    - containers:
-      name: nginx
-      image: nginx
+spec:
+- containers:
+  name: nginx
+  image: nginx
