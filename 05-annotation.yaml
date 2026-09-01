@@ -4,7 +4,7 @@ metadata:
   name: annotations
   annotation:
     bild_url: https://hellow.jason.txt
-    image_url:https:docker.com/api
+    image_url: https:docker.com/api
   spec:
     - containers:
       name: nginx
