@@ -1,4 +1,4 @@
-kind: pod'
+kind: Pod
 apiVersion: v1
 metadata:
   name: env_pod
@@ -12,3 +12,8 @@ spec:
       course: "Devops"
       trainer: "Sivakumar"
       
+---
+kind: namespace
+apiVersion: v1
+metadata:
+  namespace: vrushaliprod
