@@ -1,7 +1,7 @@
-kind: Namespaces
+kind: Namespace
 apiVersion: v1
 metadata:
-  namespace: vrushaliprod
+  namespaces: vrushaliprod
 
 ---
 
