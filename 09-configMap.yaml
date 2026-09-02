@@ -1,0 +1,23 @@
+kind: ConfigMap
+apiVersion: vi
+metadata:
+  name: configmap
+  namespace: prod
+data:
+  course: devops
+  practice: mac
+
+
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: Configpod
+  namespace: prod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      envFrom:
+        - configMapRef:
+            name: configmap
