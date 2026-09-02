@@ -14,10 +14,12 @@ apiVersion: v1
 metadata:
   name: configpod
   namespace: prod
+  labels: 
+    envFrom:
+      - configMapRef:
+          name: configmap
 spec:
   containers:
     - name: nginx
       image: nginx
-      envFrom:
-        - configMapRef:
-            name: configmap
+     
