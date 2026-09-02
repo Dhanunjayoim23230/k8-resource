@@ -1,0 +1,20 @@
+kind: ReplicaSet
+apiVersion: v1
+metadata:
+  name: repset
+  namespace: prod
+spec:
+  selector:
+    matchLabels:
+      course: devops
+      trainer: Dhanunjaya
+      hours: hundred
+  template:
+    metadata:
+      labels:
+        course: devops
+        trainer: Dhanunjaya
+        hours: hundred
+      containers:
+        - name: nginx
+          image: nginx
