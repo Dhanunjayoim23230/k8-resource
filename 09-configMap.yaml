@@ -1,5 +1,5 @@
 kind: ConfigMap
-apiVersion: vi
+apiVersion: v1
 metadata:
   name: configmap
   namespace: prod
