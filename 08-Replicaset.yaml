@@ -30,7 +30,6 @@ spec:
         hours: hundred
       annotaions:
         buildUrl: "https://vrushali.online.com"
-
     spec:
       containers:
         - name: nginx
