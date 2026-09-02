@@ -29,7 +29,7 @@ spec:
         trainer: Dhanunjaya
         hours: hundred
       annotaions:
-        buildUrl: "https://vrushali.online.com"
+        buildurl: "https://vrushali.online.com"
     spec:
       containers:
         - name: nginx
