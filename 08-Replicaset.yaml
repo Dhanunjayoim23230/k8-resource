@@ -1,3 +1,10 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: prod
+
+
+---
 kind: ReplicaSet
 apiVersion: v1
 metadata:
