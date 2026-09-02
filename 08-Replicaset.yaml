@@ -28,7 +28,7 @@ spec:
         course: devops
         trainer: Dhanunjaya
         hours: hundred
-      annotaions:
+      annotations:
         buildurl: "https://vrushali.online.com"
     spec:
       containers:
