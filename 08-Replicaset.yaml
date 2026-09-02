@@ -14,9 +14,7 @@ metadata:
       course: devops
       trainer: Dhanunjaya
       hours: hundred
-   annotaions:
-      buildUrl: "https://vrushali.online.com"
-
+   
 spec:
   replicas: 3
   selector:
@@ -30,6 +28,9 @@ spec:
         course: devops
         trainer: Dhanunjaya
         hours: hundred
+      annotaions:
+        buildUrl: "https://vrushali.online.com"
+
     spec:
       containers:
         - name: nginx
