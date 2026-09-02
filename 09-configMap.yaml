@@ -12,7 +12,7 @@ data:
 kind: Pod
 apiVersion: v1
 metadata:
-  name: Configpod
+  name: configpod
   namespace: prod
 spec:
   containers:
