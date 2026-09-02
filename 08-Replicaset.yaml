@@ -8,8 +8,8 @@ metadata:
 kind: ReplicaSet
 apiVersion: apps/v1
 metadata:
-  name: repset
-  namespace: prod
+    name: repset
+    namespace: prod
   spec:
     selector:
       matchLabels:
