@@ -7,21 +7,28 @@ metadata:
 ---
 kind: ReplicaSet
 apiVersion: apps/v1
-metadata:
-    name: repset
-    namespace: prod
-  spec:
-    selector:
-      matchLabels:
+metadata: 
+   name: repset
+   namespace: prod
+   labels:
+    course: devops
+    trainer: Dhanunjaya
+    hours: hundred
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      course: devops
+      trainer: Dhanunjaya
+      hours: hundred
+  template:
+    metadata:
+      labels:
         course: devops
         trainer: Dhanunjaya
         hours: hundred
-    template:
-      metadata:
-        labels:
-          course: devops
-          trainer: Dhanunjaya
-          hours: hundred
-        containers:
-          - name: nginx
-            image: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
