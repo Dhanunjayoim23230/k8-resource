@@ -9,10 +9,11 @@ spec:
     trainer: dhanunjaya
     application: backend
     version: clusterIP
-ports:
-  protocol: tcp
-  port: 80
-  targetport: 8080
+  ports:
+  - name: name-of-service-port
+    protocol: tcp
+    port: 80
+    targetPort: 8080
 
 
 ---
