@@ -4,7 +4,7 @@ metadata:
   name: internal-service
   namespace: prod
 spec:
-  type: nodeport
+  type: nodePort
   selector:
     course: devops
     trainer: dhanunjaya
