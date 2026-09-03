@@ -9,9 +9,9 @@ spec:
     trainer: dhanunjaya
     application: backend
     version: clusterIP
-  ports:
-    protocol: tcp
-    port: 80
+ports:
+  protocol: tcp
+  port: 80
 
 
 ---
