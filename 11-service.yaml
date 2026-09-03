@@ -1,0 +1,31 @@
+kind: Service
+apiVersion: apps/v1
+metadata:
+  name: internal-service
+  namespace: prod
+spec:
+  selectors:
+    course: devops
+    trainer: dhanunjaya
+    application: backend
+    version: clusterIP
+  ports:
+    protocol: tcp
+    port: 80
+
+
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: servicePod
+  namespace: prod
+  labels:
+    course: devops
+    trainer: dhanunjaya
+    application: backend
+    version: clusterIP
+spec:
+  containers:
+  - name: nginx
+    image: nginx
