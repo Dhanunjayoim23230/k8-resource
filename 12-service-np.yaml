@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: internal-service
+  name: internal-service-np
   namespace: prod
 spec:
   type: nodePort
@@ -23,7 +23,7 @@ spec:
 kind: Pod
 apiVersion: v1
 metadata:
-  name: servicepod
+  name: servicepod-np
   namespace: prod
   labels:
     course: devops
