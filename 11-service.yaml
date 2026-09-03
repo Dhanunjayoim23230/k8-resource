@@ -1,5 +1,5 @@
 kind: Service
-apiVersion: apps/v1
+apiVersion: v1
 metadata:
   name: internal-service
   namespace: prod
@@ -18,7 +18,7 @@ spec:
 kind: Pod
 apiVersion: v1
 metadata:
-  name: servicePod
+  name: servicepod
   namespace: prod
   labels:
     course: devops
