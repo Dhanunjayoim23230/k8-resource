@@ -44,7 +44,7 @@ spec:
     volumeMounts:
     - name: persistent-storage
       mountPath: /usr/share/nginx/html
-  vloumes:
+  volumes:
   - name: persistent-storage
     persistentVolumeClaim:
       claimName: vrushali-pv
