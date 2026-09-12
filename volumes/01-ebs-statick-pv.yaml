@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: vrushali-pv
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 25Gi
+  csi:
+    driver: ebs.csi.aws.com
+    fsType: ext4
+    volumeHandle: vol-0e492071d1da33e80
+ 
