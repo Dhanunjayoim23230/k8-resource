@@ -5,7 +5,7 @@ metadata:
   namespace: prod
 spec:
   storageClassName: "" # Empty string must be explicitly set otherwise default StorageClass will be set
-  volumeName: vrushali-pv
+  volumeName: pv-prod
   accessModes:
     - ReadWriteOnce
   resources:
@@ -48,4 +48,4 @@ spec:
   volumes:
   - name: persistent-storage
     persistentVolumeClaim:
-      claimName: vrushali-pv
+      claimName: ebs-static
