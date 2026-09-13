@@ -30,19 +30,3 @@ spec:
   - name: persistent-storage
     persistentVolumeClaim:
       claimName: ebs-static
-
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: internal-service-np
-spec:
-  type: LoadBalancer
-  selector:
-    demo: pvc
-  ports:
-  - name: name-of-service-port
-    protocol: "TCP"
-    port: 80
-    targetPort: 80
-    nodePort: 30007
