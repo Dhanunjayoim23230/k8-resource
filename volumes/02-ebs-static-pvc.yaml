@@ -37,7 +37,7 @@ apiVersion: v1
 metadata:
   name: loadBalancer
 spec:
-  type: loadbalancer
+  type: LoadBalancer
   selector:
     demo: pvc
   ports:
