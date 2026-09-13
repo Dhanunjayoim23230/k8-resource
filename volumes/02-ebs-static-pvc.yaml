@@ -19,14 +19,14 @@ metadata:
   name: internal-service-np
   namespace: prod
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     demo: pvc
   ports:
   - name: name-of-service-port
     protocol: "TCP"
     port: 80
-    targetPort: 8080
+    targetPort: 80
     nodePort: 30007
 
 
