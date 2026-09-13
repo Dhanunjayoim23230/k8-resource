@@ -43,7 +43,6 @@ spec:
   selector:
     demo: pvc
   ports:
-  - name: name-of-service-port
     protocol: "TCP"
     port: 80
     targetPort: 8080
