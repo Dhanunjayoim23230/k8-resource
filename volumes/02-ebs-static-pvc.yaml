@@ -11,6 +11,23 @@ spec:
   accessModes:
     - ReadWriteOnce
   storageClassName: ""
+
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod-static
+spec:
+  containers:
+  - name: static-nginx
+    image: nginx
+    volumeMounts:
+    - name: pv-storage
+      mountPath: "/usr/share/nginx/html"
+  volumes:
+    - name: pv-storage
+      persistentVolumeClaim:
+        claimName: pvc-ebs-claim
   
 
     
