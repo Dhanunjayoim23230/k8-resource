@@ -4,4 +4,10 @@ metadata:
   name: pvc-ebs-claim
 
 spec:
-  - name: persistentVolume
+    mounts:
+      mountPath: /usr/share/nginx/html
+    resources:
+      requests:
+        storage: "25Gi"
+    volumeName:
+      name: pv-ebs-static
