@@ -20,6 +20,8 @@ metadata:
   labels:
     demo: "static-pv"
 spec:
+  nodeSelector:
+    topology.kubernetes.io/zone: us-east-1b
   containers:
   - name: static-nginx
     image: nginx
