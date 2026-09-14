@@ -32,7 +32,7 @@ spec:
         claimName: pvc-ebs-claim
   
 ---
-kind: Servie
+kind: Service
 apiVersion: v1
 metadata:
   name: static-lb
