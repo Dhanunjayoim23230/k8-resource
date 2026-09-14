@@ -10,7 +10,7 @@ spec:
       storage: "25Gi"
   accessModes:
     - ReadWriteOnce
-  storageClassName: " "
+  storageClassName: ""
   
 
     
