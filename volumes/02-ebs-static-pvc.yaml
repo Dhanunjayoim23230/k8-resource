@@ -18,19 +18,19 @@ apiVersion: v1
 metadata:
   name: pod-static
   labels:
-    demo: static-pv
+    demo: "static-pv"
 spec:
   containers:
   - name: static-nginx
     image: nginx
     volumeMounts:
     - name: pv-storage
-      mountPath: "/usr/share/nginx/html"
+      mountPath: /usr/share/nginx/html
   volumes:
-    - name: pv-storage
-      persistentVolumeClaim:
-        claimName: pvc-ebs-claim
-  
+  - name: pv-storage
+    persistentVolumeClaim:
+      claimName: pvc-ebs-claim
+
 ---
 kind: Service
 apiVersion: v1
@@ -40,7 +40,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    demo: static-pv
+    demo: "static-pv"
   ports:
     - protocol: TCP
       port: 80
