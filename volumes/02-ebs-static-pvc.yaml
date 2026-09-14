@@ -4,6 +4,9 @@ metadata:
   name: pvc-ebs-claim
 
 spec:
+    storageClassName: " "
+    accessModes:
+      - ReadWriteOnce
     mounts:
       mountPath: /usr/share/nginx/html
     resources:
