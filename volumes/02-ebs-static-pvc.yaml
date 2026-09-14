@@ -39,7 +39,7 @@ metadata:
 
 spec:
   type: LoadBalancer
-  selectors:
+  selector:
     demo: static-pv
   ports:
     - protocol: "TCP"
