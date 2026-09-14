@@ -17,6 +17,8 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: pod-static
+  labels:
+    demo: static-pv
 spec:
   containers:
   - name: static-nginx
@@ -29,5 +31,21 @@ spec:
       persistentVolumeClaim:
         claimName: pvc-ebs-claim
   
+---
+kind: Servie
+apiVersion: v1
+metadata:
+  name: static-lb
+
+spec:
+  type: LoadBalancer
+  selectors:
+    demo: static-pv
+  ports:
+    - protocol: "TCP"
+      port: 80
+      targetPort: 8080
+      nodePort: 30007
+
 
     
