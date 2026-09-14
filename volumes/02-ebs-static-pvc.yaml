@@ -12,5 +12,4 @@ spec:
     resources:
       requests:
         storage: "25Gi"
-    volumeName:
-      name: pv-ebs-static
+    volumeName: pv-ebs-static
