@@ -4,12 +4,13 @@ metadata:
   name: pvc-ebs-claim
 
 spec:
-    storageClassName: " "
-    accessModes:
-      - ReadWriteOnce
-    mounts:
-      mountPath: /usr/share/nginx/html
-    resources:
-      requests:
-        storage: "25Gi"
-    volumeName: pv-ebs-static
+  volumeName: pv-ebs-static
+  resources:
+    requests:
+      storage: "25Gi"
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: " "
+  
+
+    
