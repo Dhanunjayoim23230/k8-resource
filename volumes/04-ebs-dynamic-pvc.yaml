@@ -9,3 +9,20 @@ spec:
       storage: "29Gi"
   accessModes:
     - ReadWriteOnce
+
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: dynamic-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      volumeMounts:
+        name: Persistent-Storage
+        mount: /usr/share/nginx/html
+  volumes:
+    - name: Persistent-Storage
+      persistentVolumeClaim:
+        claimName: "ebs-dynamic-pvc"
