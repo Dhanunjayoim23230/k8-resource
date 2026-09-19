@@ -4,8 +4,8 @@ metadata:
   name: ebs-dynamic-pvc
 spec:
   storageClassName: "ebs-sc"
-  resource:
-    request:
+  resources:
+    requests:
       capacity: "29Gi"
   accessModes:
     - ReadWriteOnce
