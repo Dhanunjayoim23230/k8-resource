@@ -33,14 +33,14 @@ spec:
 kind: Service
 apiVersion: v1
 metadata: 
-  name: ebs-dynamic-svc
+  name: ebs-dynamic-svc-lb
 spec:
   type: LoadBalancer
   selectors:
     labels:
       purpose: ebs-dynamic
   ports:
-   - protocol: "TCP"
+  - protocol: "TCP"
     port: 80
     targetPort: 80
     nodePort: 30008
