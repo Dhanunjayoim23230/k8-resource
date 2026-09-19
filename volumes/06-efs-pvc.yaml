@@ -5,7 +5,7 @@ metadata:
 
 spec:
   accessModes:
-    -ReadWriteOnce
+    - ReadWriteOnce
   storageClassName: ""
   volumeName: "pv-efs-static"
   resources:
