@@ -4,7 +4,7 @@ metadata:
   name: ebs-dynamic-pvc
 spec:
   storageClassName: "ebs-sc"
-  resources:
+  resource:
     request:
       capacity: "29Gi"
   accessModes:
