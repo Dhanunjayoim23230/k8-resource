@@ -1,0 +1,10 @@
+kind: StorageClass
+apiVersion: v1
+metadata:
+  name: efs-dynamic-sc
+provisioner: efs.csi.aws.com
+parameters:
+  provisioiningMode: efs-a
+  filesystemId: fs-07c58093192b215a1
+  directoryPerms: "700"
+  basePath: "/expense"
