@@ -1,5 +1,5 @@
 kind: StorageClass
-apiVersion: Storge.k8s.io/v1
+apiVersion: storge.k8s.io/v1
 metadata:
   name: ebs-sc
 provisioners: aws.ebs.csi.com
