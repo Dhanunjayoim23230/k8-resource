@@ -1,0 +1,13 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: efs-static-pvc
+
+spec:
+  accessmodes:
+    -ReadWriteOnce
+  storageClassName: ""
+  volumeName: "pv-efs-static"
+  resource:
+    requests:
+      storage: "5Gi"
