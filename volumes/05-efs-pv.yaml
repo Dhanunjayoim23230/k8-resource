@@ -1,0 +1,18 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-efs-static
+
+spec:
+  capacity:
+    storage: 6Gi
+  volumeModes: Filesystem
+  accessModes:
+  -  ReadWriteOnce
+  storageClassName: ""
+  persistentVolumeReclaimPolicy: Retain
+  csi:
+    driver: efs.csi.aws.com
+    fsType: ext4
+    volumeHandle: fs-07c58093192b215a1
+
