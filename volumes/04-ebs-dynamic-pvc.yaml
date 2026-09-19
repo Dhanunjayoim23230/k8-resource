@@ -36,7 +36,7 @@ metadata:
   name: ebs-dynamic-svc-lb
 spec:
   type: LoadBalancer
-  selectors:
+  selector:
     labels:
       purpose: ebs-dynamic
   ports:
