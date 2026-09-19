@@ -2,9 +2,9 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata: 
   name: ebs-dynamic-pvc
-storageclass: "ebs-sc"
-resources:
-  request:
-    capacity: "29Gi"
-accessmodes:
+StorageClass: "ebs-sc"
+Resources:
+  Request:
+    Capacity: "29Gi"
+AccessModes:
   - ReadWriteOnce
