@@ -34,7 +34,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata: 
-  name: efs-synamic-svc-lb
+  name: efs-dynamic-svc-lb
 spec:
   type: LoadBalancer
   selector:
@@ -43,5 +43,5 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
-    nodePort: 30009
+    nodePort: 30010
 
