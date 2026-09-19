@@ -20,8 +20,8 @@ spec:
     - name: nginx
       image: nginx
       volumeMounts:
-        name: Persistent-Storage
-        mount: /usr/share/nginx/html
+      - name: Persistent-Storage
+        mountPath: /usr/share/nginx/html
   volumes:
     - name: Persistent-Storage
       persistentVolumeClaim:
