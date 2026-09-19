@@ -7,7 +7,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   storageClassName: ""
-  volumeName: "pv-efs-static"
+  volumeName: pv-efs-static
   resources:
     requests:
       storage: "5Gi"
@@ -29,7 +29,7 @@ spec:
   volumes:
     - name: persistent-storage
       persistentVolumeClaim:
-        claimName: "efs-static-pvc"
+        claimName: efs-static-pvc
 
 ---
 kind: Service
