@@ -8,6 +8,6 @@ spec:
     -ReadWriteOnce
   storageClassName: ""
   volumeName: "pv-efs-static"
-  resource:
+  resources:
     requests:
       storage: "5Gi"
