@@ -29,7 +29,7 @@ spec:
   volumes:
     - name: persistent-storage
       persistentVolumeClaim:
-        claimName: "pv-efs-static"
+        claimName: "efs-static-pvc"
 
 ---
 kind: Service
