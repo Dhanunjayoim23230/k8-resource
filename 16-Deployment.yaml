@@ -1,5 +1,5 @@
 kind: Deployment
-apiVersion: v1
+apiVersion: apps/v1
 metadata:
   name: nginx-deployment
   labels:
@@ -11,26 +11,27 @@ spec:
     matchLabels:
       app: nginx
       demo: nginx-dep
-  templates:
+  template:
     metadata:
       name: nginx-deployment-pod
       labels:
         app: nginx
         demo: nginx-dep
-    container:
-    - name: nginx
-      image: nginx
-      ports:
-        containerPort: 80
+    spec:    
+      container:
+      - name: nginx
+        image: nginx
+        ports:
+          containerPort: 80
 
 ---
 kind: Service
 apiVersion: v1
 metadata:
   name: dep-svc
-    labels:
-      app: nginx
-      demo: nginx-dep
+  labels:
+    app: nginx
+    demo: nginx-dep
 spec:
   selector:
     app: nginx
