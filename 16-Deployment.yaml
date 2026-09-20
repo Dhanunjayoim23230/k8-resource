@@ -18,7 +18,7 @@ spec:
         app: nginx
         demo: nginx-dep
     spec:    
-      container:
+      containers:
       - name: nginx
         image: nginx
         ports:
@@ -33,6 +33,7 @@ metadata:
     app: nginx
     demo: nginx-dep
 spec:
+  type: LoadBalancer
   selector:
     app: nginx
     demo: nginx-dep
