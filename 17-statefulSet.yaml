@@ -1,0 +1,73 @@
+#head less service, normal service, statefull set
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-headless
+  labels:
+    app: nginx
+    demo: nginx-ss
+spec:
+  clusterIP: None
+  selector:
+    app: nginx
+    demo: nginx-ss
+  ports:
+    - protocol: TCP
+      port: 80
+     
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-svc
+
+spec:
+  selector:
+    app: nginx
+    demo: nginx-ss
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 3009
+
+---
+kind: StatefulSet
+apiVersion:  apps/v1
+metadata:
+  name: nginx-statefulset
+  labels:
+    app: nginx
+    demo: nginx-ss
+spec:
+  serviceName: "nginx-headless"
+  replicas: 3
+  selector:
+    app: nginx
+    demo: nginx-ss
+  template:
+    metadata: 
+      name: pod-ss
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          containerPort: 80
+          volumeMounts:
+            name: 
+            mountPath: usr/share/nginx/html
+  volumeClaimTemplate:
+    metadata: 
+      name: ss-volume
+      labels:
+        app: nginx
+        demo: nginx-ss
+    spec:
+      storageClassName: "ebs-sc"
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
+
+
