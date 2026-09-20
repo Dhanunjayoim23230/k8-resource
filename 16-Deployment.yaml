@@ -11,7 +11,7 @@ spec:
     matchLabels:
       app: nginx
       demo: nginx-dep
-  template:
+  templates:
     metadata:
       name: nginx-deployment-pod
       labels:
