@@ -17,7 +17,7 @@ spec:
       labels:
         app: nginx
         demo: nginx-dep
-    containers:
+    container:
     - name: nginx
       image: nginx
       ports:
