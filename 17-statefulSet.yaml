@@ -59,7 +59,7 @@ spec:
         - name: ss-pod
           mountPath: usr/share/nginx/html
   volumeClaimTemplates:
-    metadata: 
+  - metadata: 
       name: ss-volume
       labels:
         app: nginx
