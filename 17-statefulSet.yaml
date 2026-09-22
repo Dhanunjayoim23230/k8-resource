@@ -45,8 +45,9 @@ spec:
   serviceName: "nginx-headless"
   replicas: 3
   selector:
-    app: nginx
-    demo: nginx-ss
+    matchLabels:
+      app: nginx
+      demo: nginx-ss
   template:
     metadata: 
       name: pod-ss
@@ -54,7 +55,8 @@ spec:
       containers:
       - name: nginx
         image: nginx
-        containerPort: 80
+        ports:
+        - containerPort: 80
         volumeMounts:
         - name: ss-pod
           mountPath: usr/share/nginx/html
