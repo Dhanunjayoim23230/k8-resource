@@ -35,7 +35,7 @@ spec:
 
 ---
 kind: StatefulSet
-apiVersion:  apps/v1
+apiVersion: apps/v1
 metadata:
   name: nginx-statefulset
   labels:
