@@ -44,7 +44,12 @@ spec:
   initContainers:
   - name: aws-cli
     image: amazonlinux:2023
-    command: ['sh', '-c', 'aws secretsmanager get-secret-value --secret-id expense/mysql/creds --query SecretString --output text > /secrets/.env ']
+    # command: ['sh', '-c', 'aws secretsmanager get-secret-value --secret-id expense/mysql/creds --query SecretString --output text > /secrets/.env ']
+    command: ['sh', '-c']
+    args:
+    - |
+      yum install -y unzip awscli
+      aws secretsmanager get-secret-value --secret-id expense/mysql/creds --query SecretString --output text > /secrets/.env
     volumeMounts:
     - mountPath: /secrets
       name: secret-volume
