@@ -8,7 +8,7 @@ spec:
   - name: init-container
     image: busybox:1.28
     #command: ['sh', '-c', "until nslookup googfadfle.com; do echo waiting for myservice; sleep 10; done"]
-    command: ['sh', '-c', "for i in {1..10}; do sleep 10; if nslookup goodgle.com; then exit 0; fi; done; exit 1"]
+    command: ['sh', '-c', "for i in {1..10}; do sleep 10; if nslookup go#odgle.com; then exit 0; fi; done; exit 1"]
     
   containers:
   - name: nginx
