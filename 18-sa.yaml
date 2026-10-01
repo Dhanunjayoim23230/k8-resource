@@ -1,0 +1,48 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: sa-role
+  namespace: expense
+rules:
+- apiGroup: [" "]
+  resources: ["*"]
+  verbs: ["get","watch","list"]
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io
+metadata:
+  name: sa-rb
+  namespace: expense
+subjects:
+- kind: ServiceAccount
+  name: expense-sa
+  namespace: expense
+roleRef:
+  kind: Role
+  name: sa-role
+  apiGroup: rbac.authorization.k8s.io
+
+---
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: expense-sa-pod
+  namespace: expense
+spec:
+  serviceAccount: expense-sa
+
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: newpod
+  namespace: vrushaliprod
+
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+  
+
