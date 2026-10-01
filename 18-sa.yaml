@@ -40,7 +40,7 @@ metadata:
   name: sa-pod
   namespace: expense
 spec:
-  serviceAccount: expense-mysql-cluster
+  serviceAccount: expense-mysql-secret
   initContainers:
   - name: aws-cli
     image: amazon/aws-cli
