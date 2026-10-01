@@ -7,7 +7,7 @@ metadata:
   name: sa-role
   namespace: expense
 rules:
-- apiGroup: [""]
+- apiGroups: [""]
   resources: ["*"]
   verbs: ["get","watch","list"]
 
@@ -26,14 +26,6 @@ roleRef:
   name: sa-role
   apiGroup: rbac.authorization.k8s.io
 
----
-kind: ServiceAccount
-apiVersion: v1
-metadata:
-  name: expense-sa-pod
-  namespace: expense
-spec:
-  serviceAccount: expense-sa
 
 #Secrets fetching by init container and sharing to main pod
 ---
