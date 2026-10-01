@@ -1,10 +1,13 @@
+#Pod accessing kubectl from another POD, POD accessing default namespace and checking howmany pods running
+#install kubectl in pod
+#Using SA it can access the  internal resourcess/objects
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: sa-role
   namespace: expense
 rules:
-- apiGroup: [" "]
+- apiGroup: [""]
   resources: ["*"]
   verbs: ["get","watch","list"]
 
@@ -16,7 +19,7 @@ metadata:
   namespace: expense
 subjects:
 - kind: ServiceAccount
-  name: expense-sa
+  name: expense-mysql-secret
   namespace: expense
 roleRef:
   kind: Role
@@ -32,7 +35,7 @@ metadata:
 spec:
   serviceAccount: expense-sa
 
-
+#Secrets fetching by init container and sharing to main pod
 ---
 apiVersion: v1
 kind: Pod
@@ -40,7 +43,7 @@ metadata:
   name: sa-pod
   namespace: expense
 spec:
-  serviceAccount: expense-mysql-secret
+  serviceAccount: expense-mysql-secret # this POD running with role & role binding to access the internal resources
   initContainers:
   - name: aws-cli
     image: amazonlinux:2023
